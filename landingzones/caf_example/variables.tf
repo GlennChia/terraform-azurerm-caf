@@ -28,7 +28,7 @@ variable "provider_azurerm_features_keyvault" {
   }
 }
 variable "cloud" {
-  default     = {}
+  default = {}
 }
 variable "acrLoginServerEndpoint" {
   default = ".azurecr.io"
@@ -250,6 +250,9 @@ variable "keyvault_certificates" {
 variable "virtual_machines" {
   default = {}
 }
+variable "virtual_machine_scale_sets" {
+  default = {}
+}
 variable "bastion_hosts" {
   default = {}
 }
@@ -293,6 +296,9 @@ variable "machine_learning_workspaces" {
   default = {}
 }
 variable "monitoring" {
+  default = {}
+}
+variable "virtual_hubs" {
   default = {}
 }
 variable "virtual_wans" {
@@ -488,6 +494,15 @@ variable "virtual_hub_route_tables" {
   default = {}
 }
 variable "virtual_hub_er_gateway_connections" {
+  default = {}
+}
+variable "wvd_application_groups" {
+  default = {}
+}
+variable "wvd_workspaces" {
+  default = {}
+}
+variable "wvd_host_pools" {
   default = {}
 }
 variable "lighthouse_definitions" {

@@ -60,7 +60,11 @@ locals {
     bastion_hosts              = try(var.compute.bastion_hosts, {})
     container_groups           = try(var.compute.container_groups, {})
     proximity_placement_groups = try(var.compute.proximity_placement_groups, {})
+    wvd_application_groups     = try(var.compute.wvd_application_groups, {})
+    wvd_host_pools             = try(var.compute.wvd_host_pools, {})
+    wvd_workspaces             = try(var.compute.wvd_workspaces, {})
     virtual_machines           = try(var.compute.virtual_machines, {})
+    virtual_machine_scale_sets = try(var.compute.virtual_machine_scale_sets, {})
   }
 
   database = {
@@ -192,6 +196,7 @@ locals {
     virtual_hub_connections                                 = try(var.networking.virtual_hub_connections, {})
     virtual_hub_er_gateway_connections                      = try(var.networking.virtual_hub_er_gateway_connections, {})
     virtual_hub_route_tables                                = try(var.networking.virtual_hub_route_tables, {})
+    virtual_hubs                                            = try(var.networking.virtual_hubs, {})
     virtual_network_gateway_connections                     = try(var.networking.virtual_network_gateway_connections, {})
     virtual_network_gateways                                = try(var.networking.virtual_network_gateways, {})
     virtual_wans                                            = try(var.networking.virtual_wans, {})
